@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8}
+/*by Karen: added to remove the underline below <a> link*/
+a {text-decoration: none;}
+
+#contact {
+    background-image: url("imgs/DSC_0584.jpg");
+    height: 600px;
+    background-size: cover;
+}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding w3-center"><b>Danielle<br>Marie</b></h3>
+  <img src="imgs/main.jpg" class="w3-center" style="width:150px" alt="mainimg">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">MODELING PORTFOLIO</a>
+  <a href="bodybuilding.html" onclick="w3_close()" class="w3-bar-item w3-button">BODYBUILDING</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+  <a href="blog.html" onclick="w3_close()" class="w3-bar-item w3-button">BLOG</a>
+  <a href="Diet&Workouts.html" onclick="w3_close()" class="w3-bar-item w3-button">DIET & WORKOUT</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Danielle Marie</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:300px">
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  <!-- About section -->
+  <!-- by Karen: moved image out from the w3-container so it will occupy the whole page width -->
+  <div class="w3-dark-grey" id="about">
+  </div>
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-dark-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-left w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>Want to contact me for bookings? Have any questions? Feel free to email me!</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+   <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <h3>INFO</h3>
+        <p style="margin-left: 16px;"><i class="fa fa-user-o" aria-hidden="true"></i> Danielle Marie</p>
+        <p style="margin-left: 16px;"><i class="fa fa-building-o" aria-hidden="true"></i> Boston, MA</p>
+        <p><a href="contact.html" class="w3-button w3-hover-black"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email: dmariefitt@gmail.com</a></p>
+        <p><a href="https://www.instagram.com/d_mariefit/?hl=en" target="_blank" class="w3-button w3-hover-black"><i class="fa fa-instagram w3-large" aria-hidden="true"></i> Instagram: @d_mariefit</a> </p>
+      </div>
+
+      <div class="w3-half">
+        <h3>YOUTUBE</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+          <!-- by Karen: added <a> link to make it clickable use  -->
+          <!-- target="_blank" to load the page in a new tab -->
+          <a href="https://youtu.be/ekuAKkxBt6M" target="_blank">
+            <img src="imgs/dd.jpg" class="w3-center" style="width:50px" alt="dougDanielle">
+            <span class="w3-large">@dougdaniellefit</span><br>
+            <span>Watch our transformation!</span>
+          </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
